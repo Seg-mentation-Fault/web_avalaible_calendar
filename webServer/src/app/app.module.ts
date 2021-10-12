@@ -3,12 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './numberImputCapture/app.component';
-import { NavbarcomponentComponent } from './navbarcomponent/navbarcomponent.component';
+import { NavbarcomponentComponent } from './navbar/navbart.component';
 
 @NgModule({
   declarations: [
+    NavbarcomponentComponent,
     AppComponent,
-    NavbarcomponentComponent
   ],
   imports: [
     BrowserModule,
