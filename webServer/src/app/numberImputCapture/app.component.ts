@@ -10,9 +10,13 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  numberGuest: number = 0;
+  numberGuest: number = 1;
 
   Guardado(){
-    alert(this.numberGuest)
+    if (this.numberGuest < 0) {
+      alert("Invalid number: > 0")
+    }else{
+      alert(this.numberGuest)
+    }
   }
 }
