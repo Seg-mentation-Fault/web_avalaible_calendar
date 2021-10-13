@@ -6,3 +6,39 @@
     width: 50%;
     height: 100%;
 }
+button{
+    margin-top: 57%;
+}
+
+@media screen and (max-width: 767px){
+    button{
+        margin-top: 7%;
+        width: 70%;
+    }
+    .col-14{
+        width: 70%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    button{
+        margin-top: 7%;
+        width: 70%;
+    }
+    .col-14{
+        width: 70%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 1800px) {
+    button{
+        margin-top: 7%;
+        width: 70%;
+    }
+    .col-14{
+        width: 70%;
+        height: 100%;
+    }
+}
