@@ -4,13 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './numberImputCapture/app.component';
 import { NavbarcomponentComponent } from './navbarcomponent/navbarcomponent.component';
-
+import { AppCalendar } from './calendar/calendar.component';
 import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarcomponentComponent
+    NavbarcomponentComponent,
+    AppCalendar,
   ],
   imports: [
     BrowserModule,
