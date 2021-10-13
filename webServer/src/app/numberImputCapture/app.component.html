@@ -5,11 +5,11 @@
     <label class="visually-hidden" for="inlineFormInputGroupUsername">Number of guest</label>
     <div class="input-group col-12" >
       <div class="input-group-text">#</div>
-      <input type="number" class="form-control" id="inlineFormInputGroupUsername" placeholder="Number of guest">
+      <input type="number" class="form-control" id="inlineFormInputGroupUsername" placeholder="NumberGuest" [(ngModel)]="numberGuest" [ngModelOptions]="{standalone: true}">
     </div>
   </div>
 
   <div class="col-12">
-    <button type="submit" class="btn btn-danger">Submit</button>
+    <button type="submit" class="btn btn-danger" (click)="Guardado()">Submit</button>
   </div>
 </form>
