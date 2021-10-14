@@ -6,6 +6,8 @@ import { AppComponent } from './numberImputCapture/app.component';
 import { NavbarcomponentComponent } from './navbarcomponent/navbarcomponent.component';
 import { AppCalendar } from './calendar/calendar.component';
 import {FormsModule} from '@angular/forms';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -16,9 +18,11 @@ import {FormsModule} from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [AppCalendar]
 })
 export class AppModule { }

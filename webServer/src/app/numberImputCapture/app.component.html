@@ -10,7 +10,17 @@
   </div>
 
   <div class="col-12">
-    <button type="submit" class="btn btn-danger" (click)="Guardado()">Submit</button>
+    <button type="submit" class="btn btn-danger" (click)="Guardado(mymodal)">Submit</button>
   </div>
 </form>
-<app-calendar></app-calendar>
+<ng-template #mymodal let-modal>
+  <div class="modal-header">
+    cerrar
+  </div>
+  <div class="modal--body">
+    <app-calendar></app-calendar>
+  </div>
+  <div class="modal-footer">
+    footer
+  </div>
+</ng-template>
