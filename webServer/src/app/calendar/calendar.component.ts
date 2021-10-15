@@ -11,39 +11,39 @@ export class AppCalendar implements OnInit {
   constructor() { }
 
   week: any = [
-    "Lunes",
-    "Martes",
-    "Miercoles",
-    "Jueves",
-    "Viernes",
-    "Sabado",
-    "Domingo"
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
   ];
 
 
   monthSelect: any[] = [];
-  dateSelect: any;
+  dateSelect: any = moment().format('YYYY-MMMM');
   dateValue: any;
+  currentdate: any = moment().format('YYYY-MMMM')
 
   ngOnInit(): void {
-    this.getDaysFromDate(11, 2020)
+    const month =  moment().format('MM')
+    const year =  moment().format('Y')
+    this.getDaysFromDate(month, year)
   }
-
   getDaysFromDate(month: any, year:any) {
-
-    const startDate = moment.utc(`${year}/${month}/01`)
+    const startDate = moment.utc(`${year}/${month}`)
     const endDate = startDate.clone().endOf('month')
-    this.dateSelect = startDate;
-
-    const diffDays = endDate.diff(startDate, 'days', true)
+    this.dateSelect = startDate
+    const diffDays = endDate.diff(startDate, 'days') + 1
     const numberDays = Math.round(diffDays);
 
-    const arrayDays = Object.keys([...Array(numberDays)]).map((a: any) => {
-      a = parseInt(a) + 1;
-      const dayObject = moment(`${year}-${month}-${a}`);
+    const arrayDays = Object.keys([...Array(numberDays)]).map((dayforday: any) => {
+      dayforday = parseInt(dayforday) + 1;
+      const dayObject = moment(`${year}-${month}-${dayforday}`);
       return {
         name: dayObject.format("dddd"),
-        value: a,
+        value: dayforday,
         indexWeek: dayObject.isoWeekday()
       };
     });
@@ -53,10 +53,10 @@ export class AppCalendar implements OnInit {
 
   changeMonth(flag:any) {
     if (flag < 0) {
-      const prevDate = this.dateSelect.clone().subtract(1, "month");
+      const prevDate = this.dateSelect.subtract(1, "month");
       this.getDaysFromDate(prevDate.format("MM"), prevDate.format("YYYY"));
     } else {
-      const nextDate = this.dateSelect.clone().add(1, "month");
+      const nextDate = this.dateSelect.add(1, "month");
       this.getDaysFromDate(nextDate.format("MM"), nextDate.format("YYYY"));
     }
   }
@@ -66,8 +66,6 @@ export class AppCalendar implements OnInit {
     const parse = `${monthYear}-${day.value}`
     const objectDate = moment(parse)
     this.dateValue = objectDate;
-
-
   }
 
 }
