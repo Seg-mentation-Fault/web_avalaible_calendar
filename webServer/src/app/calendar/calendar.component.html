@@ -3,7 +3,7 @@
 		<div>
 			<button (click)="changeMonth(-1)" class="btn-prev">Antes</button>
 		</div>
-		<h1>{{dateSelect}}</h1>
+		<h1>{{dateSelect | date}}</h1>
 		<div>
 			<button (click)="changeMonth(1)" class="btn-next">Siguiente</button>
 		</div>
@@ -22,3 +22,8 @@
 <div class="date">
 	Fecha: {{dateValue | date}}
 </div>
+<ng-container *ngIf="dateValue">
+	<div>
+		<app-parks></app-parks>
+	</div>
+</ng-container>

@@ -9,6 +9,7 @@ import {FormsModule} from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { ParksComponent } from './parks/parks.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
     AppComponent,
     NavbarcomponentComponent,
     AppCalendar,
+    ParksComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,6 +28,6 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [AppCalendar]
+  entryComponents: [AppCalendar, ParksComponent]
 })
 export class AppModule { }
