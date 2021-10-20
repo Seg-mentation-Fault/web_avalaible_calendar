@@ -17,6 +17,12 @@ input{
   border-color: rgb(54, 146, 146);
   border-radius: 7%;
 }
+button{
+  margin: 4% 0% 0% 31%;
+  width: 30%;
+  background-color:rgb(54, 146, 146);
+  border-color: rgb(54, 146, 146);
+}
 @media screen and (max-width: 767px){
   .bt{
     align-items: center;

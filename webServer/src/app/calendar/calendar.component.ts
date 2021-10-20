@@ -8,12 +8,14 @@ import {FormGroup, FormControl} from '@angular/forms';
   styleUrls: ['./calendar.component.css']
 })
 export class AppCalendar implements OnInit {
-  DateOfReservation:string = ""
+  DateOfReservation:Date = new Date();
+  numberClick:number = 0;
   constructor() { }
 
   ngOnInit(): void {
   }
   Guardado(){
+    this.numberClick = 1;
     console.log(this.DateOfReservation)
   }
 }
