@@ -1,28 +1,20 @@
-<div class="wrapper-calendar">
-	<div class="header-calendar">
-		<div>
-			<button (click)="changeMonth(-1)" class="btn-prev">Antes</button>
-		</div>
-		<h1>{{dateSelect | date}}</h1>
-		<div>
-			<button (click)="changeMonth(1)" class="btn-next">Siguiente</button>
+<form class="row row-cols-lg-auto g-3 align-items-center form">
+	<div class="col-14">
+		<h2>Enter Date of reservation</h2>
+		<label class="visually-hidden" for="inlineFormInputGroupUsername">Number of guest</label>
+		<div class="input-group col-12" >
+			<div class="input-group-text">/</div>
+			<input  class="form-control" type="text" id="inlineFormInputGroupUsername" placeholder="DateOfReservation" matInput [matDatepicker]="picker" [(ngModel)]="DateOfReservation" [ngModelOptions]="{standalone: true}">
+
 		</div>
 	</div>
-	<ol>
-		<li *ngFor="let day of week" class="day-name">{{day | slice:0:3}}</li>
+	<div class="col-12 bt">
+		<mat-datepicker-toggle matSuffix [for]="picker" style="background-color: rgb(54, 146, 146);" class="btno"></mat-datepicker-toggle>
+		<mat-datepicker #picker></mat-datepicker>
+	</div>
+</form>
 
-        <li (click)="clickDay(day)" [style.gridColumnStart]="first ? day?.indexWeek : 'auto'"
-         *ngFor="let day of monthSelect;let first = first">
-			<span>{{day?.value}}</span>
-		</li>
-	</ol>
-</div>
-
-<hr>
-<div class="date">
-	Fecha: {{dateValue | date}}
-</div>
-<ng-container *ngIf="dateValue">
+<ng-container >
 	<div>
 		<app-parks></app-parks>
 	</div>

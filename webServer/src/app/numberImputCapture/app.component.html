@@ -5,22 +5,14 @@
     <label class="visually-hidden" for="inlineFormInputGroupUsername">Number of guest</label>
     <div class="input-group col-12" >
       <div class="input-group-text">#</div>
-      <input type="number" class="form-control" id="inlineFormInputGroupUsername" placeholder="NumberGuest" [(ngModel)]="numberGuest" [ngModelOptions]="{standalone: true}">
+      <input type="number" class="form-control" id="inlineFormInputGroupUsername" placeholder="NumberGuest" (ngModel)="numberGuest" [ngModelOptions]="{standalone: true}">
     </div>
   </div>
 
   <div class="col-12">
-    <button type="submit" class="btn btn-danger" (click)="Guardado(mymodal)">Submit</button>
+    <button type="submit" class="btn btn-danger" (click)="show = !show">Submit</button>
   </div>
 </form>
-<ng-template #mymodal let-modal>
-  <div class="modal-header">
-    cerrar
-  </div>
-  <div class="modal--body">
+<ng-container *ngIf="show">
     <app-calendar></app-calendar>
-  </div>
-  <div class="modal-footer">
-    footer
-  </div>
-</ng-template>
+</ng-container>
