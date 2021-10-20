@@ -18,9 +18,15 @@ export class AppComponent implements OnInit {
   }
   show = false;
   numberGuest: number = 1;
-  Guardado(numberClick: number) {
+  numberClick: number = 0;
+  Guardado() {
+    console.log(this.numberGuest)
     if (this.numberGuest <= 0){
       alert("Number should be above 0")
+      this.numberClick = 0;
+    }
+    else{
+      this.numberClick = 1;
     }
   }
 

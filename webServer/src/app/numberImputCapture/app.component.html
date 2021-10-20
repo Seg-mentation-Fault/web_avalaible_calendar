@@ -5,14 +5,14 @@
     <label class="visually-hidden" for="inlineFormInputGroupUsername">Number of guest</label>
     <div class="input-group col-12" >
       <div class="input-group-text">#</div>
-      <input type="number" class="form-control" id="inlineFormInputGroupUsername" placeholder="NumberGuest" (ngModel)="numberGuest" [ngModelOptions]="{standalone: true}">
+      <input type="number" class="form-control" id="inlineFormInputGroupUsername" placeholder="NumberGuest" [(ngModel)]="numberGuest" [ngModelOptions]="{standalone: true}">
     </div>
   </div>
 
   <div class="col-12">
-    <button type="submit" class="btn btn-danger" (click)="show = !show">Submit</button>
+    <button type="submit" class="btn btn-danger" (click)="Guardado()">Submit</button>
   </div>
 </form>
-<ng-container *ngIf="show">
+<ng-container *ngIf="numberClick==1">
     <app-calendar></app-calendar>
 </ng-container>

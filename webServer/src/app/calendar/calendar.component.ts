@@ -13,4 +13,7 @@ export class AppCalendar implements OnInit {
 
   ngOnInit(): void {
   }
+  Guardado(){
+    console.log(this.DateOfReservation)
+  }
 }
