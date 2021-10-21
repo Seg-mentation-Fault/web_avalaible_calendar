@@ -33,6 +33,10 @@ button{
       width: 70%;
       height: 100%;
   }
+  button{
+    margin: 4% 0% 0% 20%;
+    width: 20%;
+  }
 }
 
 @media screen and (max-width: 575px) {
@@ -46,13 +50,34 @@ button{
   }
 }
 
-@media screen and (max-width: 1800px) {
-  button{
-      margin-top: 7%;
-      width: 70%;
-  }
+@media screen and (max-width: 1600px) {
   .col-14{
       width: 70%;
       height: 100%;
   }
+  button{
+    margin: 4% 0% 0% 32%;
+    width: 40%;
+  }
+  .bt{
+    align-items: center;
+    margin: 9% 0% 0% 0%;
+    width: 8%;
+  }
+}
+
+@media screen and (max-width: 2000px){
+  .col-14{
+    width: 70%;
+    height: 100%;
+}
+button{
+  margin: 4% 0% 0% 32%;
+  width: 40%;
+}
+.bt{
+  align-items: center;
+  margin: 5.5% 0% 0% 0%;
+  width: 5%;
+}
 }
