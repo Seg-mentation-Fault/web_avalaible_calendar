@@ -11,5 +11,7 @@ export class ParksComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  Selected(numberSelected: number){
+    console.log(numberSelected)
+  }
 }
