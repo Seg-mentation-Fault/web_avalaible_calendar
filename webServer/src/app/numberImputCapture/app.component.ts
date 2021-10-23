@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
-import { AppCalendar } from '../calendar/calendar.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
