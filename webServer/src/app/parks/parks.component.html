@@ -1,16 +1,16 @@
-<table class="table table-dark">
-    <thead>
+<table class="table">
+    <thead class="thead-dark">
       <tr>
         <th scope="col">Park</th>
-        <th scope="col">Disponibilidad</th>
-        <th scope="col">Select</th>
+        <th scope="col">Availability</th>
+        <th>Select</th>
       </tr>
     </thead>
-    <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td><input type="radio" name="transporte2" value="1" (click)="Selected(1)">Coche</td>
+    <tbody *ngFor="let items of listOfParks">
+        <tr *ngFor="let item of items">
+          <td *ngIf="item.availability == true">{{item.name}}</td>
+          <td *ngIf="item.availability == true">{{item.availability}}</td>
+          <td *ngIf="item.availability == true"><input type="radio" name="transporte2" value="1" (click)="Selected(item.id)"></td>  
         </tr>
     </tbody>
 </table>

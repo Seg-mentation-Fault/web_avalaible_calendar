@@ -12,13 +12,14 @@ import { ParksService } from '../Services/parks.service'
 export class AppCalendar implements OnInit {
   DateOfReservation:Date = new Date();
   numberClick:number = 0;
+  listOfParks:any = [];
+
   constructor(private parkService:ParksService) { }
   @Input() numberGuest: number = 1;
   ngOnInit(): void {
   }
   
   ConfirmDate(){
-    // variable click show component
     this.numberClick = 1;
     // Reset type Date
     const newDate = moment(this.DateOfReservation).format('YYYY-MM-DD')
@@ -28,8 +29,11 @@ export class AppCalendar implements OnInit {
       date: newDate
     }
     // Send post
+    this.listOfParks = []
+
     this.parkService.Allpark(guestanddata).subscribe(data =>{
-      console.log(data)
+      this.listOfParks.push(data) 
     })
+    console.log(this.listOfParks)
   }
 }

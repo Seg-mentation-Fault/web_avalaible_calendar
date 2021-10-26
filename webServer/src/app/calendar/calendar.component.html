@@ -16,7 +16,6 @@
 <button type="submit" class="btn btn-danger" (click)="ConfirmDate()">Confirm</button>
 <ng-container *ngIf="numberClick == 1">
 	<div>
-		<app-parks></app-parks>
+		<app-parks [listOfParks]='listOfParks'></app-parks>
 	</div>
 </ng-container>
-{{numberGuest}}

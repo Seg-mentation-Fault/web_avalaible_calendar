@@ -12,13 +12,11 @@ export class AppComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.numberGuest)
   }
   show = false;
   numberGuest: number = 1;
   numberClick: number = 0;
   Guardado() {
-    console.log(this.numberGuest)
     if (this.numberGuest <= 0){
       alert("Number should be above 0")
       this.numberClick = 0;
