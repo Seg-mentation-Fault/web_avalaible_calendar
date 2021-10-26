@@ -14,3 +14,16 @@
         </tr>
     </tbody>
 </table>
+<button  type="submit" class="btn btn-danger" (click)="open(mymodal)">Confirm Park</button>
+<ng-template #mymodal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title"></h4>
+    <button type="button" class="btn btn-danger" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <app-form-reservation></app-form-reservation>
+  </div>
+
+</ng-template>

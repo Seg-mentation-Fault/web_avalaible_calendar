@@ -15,13 +15,15 @@ import {MatCardModule} from '@angular/material/card';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { FormReservationComponent } from './form-reservation/form-reservation.component'
 @NgModule({
   declarations: [
     AppComponent,
     NavbarcomponentComponent,
     AppCalendar,
     ParksComponent,
+    FormReservationComponent,
   ],
   imports: [
     BrowserModule,
