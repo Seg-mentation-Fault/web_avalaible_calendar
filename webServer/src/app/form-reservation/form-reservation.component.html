@@ -1,18 +1,18 @@
 <form>
     <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
       <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
     </div>
     <div class="form-group">
-      <label for="exampleInputPassword1">First name</label>
-      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="First name">
+      <label for="exampleInputPassword1" >First name</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="First name" [(ngModel)]="firstname" [ngModelOptions]="{standalone: true}">
     </div>
     <div class="form-group">
         <label for="exampleInputPassword1">Last name</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Last name">
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Last name" [(ngModel)]="lastname" [ngModelOptions]="{standalone: true}">
     </div>
     <div class="modal-footer">
-        <button  type="submit" class="btn btn-danger">Confirm Reservation</button>
+        <button  type="submit" class="btn btn-danger" (click)="confirmReservation()">Confirm Reservation</button>
     </div>
 </form>

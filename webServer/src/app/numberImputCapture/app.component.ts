@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { DataService } from '../Services/data.service'
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,7 +11,7 @@ export class AppComponent implements OnInit {
 
   closeResult: string = "";
 
-  constructor() { }
+  constructor(private dataservice:DataService) { }
 
   ngOnInit(): void {
   }
@@ -24,6 +26,6 @@ export class AppComponent implements OnInit {
     else{
       this.numberClick = 1;
     }
+    this.dataservice.changeNumber(this.numberGuest)
   }
-
 }

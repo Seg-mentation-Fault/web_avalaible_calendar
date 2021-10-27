@@ -3,6 +3,7 @@ import * as moment from 'moment'
 import {FormGroup, FormControl} from '@angular/forms';
 
 import { ParksService } from '../Services/parks.service'
+import { DataService } from '../Services/data.service'
 
 @Component({
   selector: 'app-calendar',
@@ -13,8 +14,9 @@ export class AppCalendar implements OnInit {
   DateOfReservation:Date = new Date();
   numberClick:number = 0;
   listOfParks:any = [];
+  
 
-  constructor(private parkService:ParksService) { }
+  constructor(private parkService:ParksService, private dataservice:DataService) { }
   @Input() numberGuest: number = 1;
   ngOnInit(): void {
   }
@@ -23,6 +25,7 @@ export class AppCalendar implements OnInit {
     this.numberClick = 1;
     // Reset type Date
     const newDate = moment(this.DateOfReservation).format('YYYY-MM-DD')
+    this.dataservice.changeDate(newDate)
     // Object of data post
     const guestanddata = {
       numOfGuests: this.numberGuest,
@@ -34,6 +37,5 @@ export class AppCalendar implements OnInit {
     this.parkService.Allpark(guestanddata).subscribe(data =>{
       this.listOfParks.push(data) 
     })
-    console.log(this.listOfParks)
   }
 }
