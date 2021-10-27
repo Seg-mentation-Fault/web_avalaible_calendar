@@ -2,6 +2,9 @@
 <form class="row row-cols-lg-auto g-3 align-items-center form">
   <div class="col-14">
     <h2>Enter number of guests</h2>
+    <div class="alert alert-danger" role="alert" *ngIf="numberGuest <= 0">
+      Number should be above 0
+    </div>
     <label class="visually-hidden" for="inlineFormInputGroupUsername">Number of guest</label>
     <div class="input-group col-12" >
       <div class="input-group-text">#</div>

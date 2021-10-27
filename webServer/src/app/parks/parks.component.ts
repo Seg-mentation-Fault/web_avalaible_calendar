@@ -41,6 +41,7 @@ export class ParksComponent implements OnInit {
   }
   
   private getDismissReason(reason: any): string {
+    window.location.reload();
     if (reason === ModalDismissReasons.ESC) {
       return 'by pressing ESC';
     } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
