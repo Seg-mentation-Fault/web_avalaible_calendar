@@ -10,11 +10,12 @@ import { DataService } from '../Services/data.service'
   styleUrls: ['./parks.component.css']
 })
 export class ParksComponent implements OnInit {
-  id:any;
+  id:number = 0;
   items:any;
   item:any
   closeResult: string = '';
   info:any;
+  selectPark:boolean;
 
   @Input() listOfParks:any = []
   constructor(private modalService: NgbModal, private dataservice:DataService) { }
@@ -25,11 +26,17 @@ export class ParksComponent implements OnInit {
     this.id = numberSelected;
   }
   open(content:any) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+    if(this.id < 1){
+     this.selectPark = false;
+    }else{
+      this.selectPark = true;
+      this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
     });
+    }
+
     this.dataservice.changeId(this.id)
   }
   
