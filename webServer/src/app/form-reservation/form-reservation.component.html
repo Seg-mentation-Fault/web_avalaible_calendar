@@ -1,6 +1,7 @@
 <form>
     <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
+        <div class="alert alert-danger" role="alert" *ngIf="validEmail == false"><p>Send a valid email</p></div>
       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
       <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
     </div>
@@ -16,3 +17,10 @@
         <button  type="submit" class="btn btn-danger" (click)="confirmReservation()">Confirm Reservation</button>
     </div>
 </form>
+<div class="card" *ngFor="let items of confirmation">
+  <div class="card-body">
+    <h5 class="card-title">Your confirm Code: </h5>
+    <p class="card-text">{{items.confirmCode}}</p>
+  </div>
+</div>
+

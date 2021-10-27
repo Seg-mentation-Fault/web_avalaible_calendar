@@ -16,6 +16,7 @@ export class FormReservationComponent implements OnInit {
   email:string = "";
   id:number = 0;
   confirmation:any = [];
+  validEmail:boolean;
 
   constructor(private dataservice:DataService, private reservation:ReservationService) { }
 
@@ -26,17 +27,27 @@ export class FormReservationComponent implements OnInit {
   }
 
   confirmReservation(){
-    const dataReservation = {
-      firstName: this.firstname,
-      lastName:this.lastname,
-      email:this.email,
-      numOfGuests:this.numberGuest,
-      date:this.date,
-      ParkId:this.id,
+    const EMAIL_REEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (this.email.match(EMAIL_REEX)){
+      this.validEmail = true;
+    }else{
+      this.validEmail = false;
     }
-    this.reservation.conReservation(dataReservation).subscribe(data =>{
-      console.log(data);
-    })
+    if (this.validEmail == true){
+      const dataReservation = {
+        firstName: this.firstname,
+        lastName:this.lastname,
+        email:this.email,
+        numOfGuests:this.numberGuest,
+        date:this.date,
+        ParkId:this.id,
+      }
+      this.reservation.conReservation(dataReservation).subscribe(data =>{
+        this.confirmation.push(data);
+        console.log(data)
+      })
+    }
+
   }
 
 }
