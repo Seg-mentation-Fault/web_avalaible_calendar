@@ -1,53 +1,51 @@
-.form{
-    margin: 10% 0% 0% 30%;
-    margin-left: 28%;
-    align-items: center;
+.form {
+  margin: 10% 0% 0% 30%;
+  margin-left: 28%;
+  align-items: center;
 }
-.col-14{
-    width: 50%;
-    height: 100%;
+.col-14 {
+  width: 50%;
+  height: 100%;
 }
-button{
-    margin-top: 57%;
-    background-color: rgb(54, 146, 146);
-    border-color: rgb(54, 146, 146);
+button {
+  margin-top: 57%;
+  background-color: rgb(54, 146, 146);
+  border-color: rgb(54, 146, 146);
 }
-.btn-danger :hover{
-    background-color: aqua;
+.btn-danger :hover {
+  background-color: aqua;
 }
-.modal-header{
-    background-color:rgb(54, 146, 146) ;
-}
-
-@media screen and (max-width: 767px){
-    button{
-        margin-top: 7%;
-        width: 70%;
-    }
-    .col-14{
-        width: 70%;
-        height: 100%;
-    }
+.modal-header {
+  background-color: rgb(54, 146, 146);
 }
 
 @media screen and (max-width: 575px) {
-    button{
-        margin-top: 7%;
-        width: 70%;
-    }
-    .col-14{
-        width: 70%;
-        height: 100%;
-    }
+  button {
+    margin-top: 7%;
+    width: 70%;
+  }
+  .col-14 {
+    width: 70%;
+    height: 100%;
+  }
 }
 
-@media screen and (max-width: 1800px) {
-    button{
-        margin-top: 7%;
-        width: 70%;
-    }
-    .col-14{
-        width: 70%;
-        height: 100%;
-    }
+@media screen and (max-width: 992px) {
+  button {
+    margin-top: 7%;
+    width: 70%;
+  }
+  .col-14 {
+    width: 70%;
+    height: 100%;
+  }
 }
+/* @media screen and (max-width: 1500px) {
+  button {
+    width: 100%;
+  }
+  .col-14 {
+    width: 70%;
+    height: 100%;
+  }
+} */
