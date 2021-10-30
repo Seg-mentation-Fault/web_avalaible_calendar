@@ -11,12 +11,18 @@ button{
     margin-top: 57%;
     background-color: rgb(54, 146, 146);
     border-color: rgb(54, 146, 146);
+    height: 55px;
 }
 .btn-danger :hover{
     background-color: aqua;
 }
 .modal-header{
     background-color:rgb(54, 146, 146) ;
+}
+
+.inputN{
+    height: 55px;
+    width: 50%;
 }
 
 @media screen and (max-width: 767px){

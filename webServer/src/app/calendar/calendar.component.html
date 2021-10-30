@@ -5,12 +5,9 @@
 		<div class="input-group col-12" >
 			<div class="input-group-text">/</div>
 			<input  class="form-control" type="text" id="inlineFormInputGroupUsername" placeholder="DateOfReservation" matInput [matDatepicker]="picker" [(ngModel)]="DateOfReservation" [ngModelOptions]="{standalone: true}">
-
+			<mat-datepicker-toggle matSuffix [for]="picker" style="background-color: rgb(54, 146, 146);" class="btn btn-danger bt"></mat-datepicker-toggle>
+			<mat-datepicker #picker></mat-datepicker>
 		</div>
-	</div>
-	<div class="col-12 bt">
-		<mat-datepicker-toggle matSuffix [for]="picker" style="background-color: rgb(54, 146, 146);" class="btno"></mat-datepicker-toggle>
-		<mat-datepicker #picker></mat-datepicker>
 	</div>
 </form>
 <button type="submit" class="btn btn-danger" (click)="ConfirmDate()">Confirm</button>
