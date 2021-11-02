@@ -4,12 +4,13 @@
   </div>
 <div class="row" *ngFor="let items of listOfParks">
   <div class="col-sm-6" *ngFor="let item of items">
-    <div class="card cardPark">
+    <div class="card cardPark" style="min-width: 400px; max-width: 400px;">
       <div class="card-body">
-        <h1 class="card-title">{{item.name}}</h1>
+        <h1 class="card-title" >{{item.name}}</h1>
         <p *ngIf="item.availability == true">Available</p>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <button type="button" class="btn btn-danger" (click)="Selected(item.id)">Select</button>
+        <p *ngIf="item.availability == false"> Not Available</p>
+        <p class="card-text">{{item.description}}</p>
+        <button type="button" class="btn btn-danger" (click)="Selected(item.id)" [disabled]="item.availability == false">Select</button>
       </div>
     </div>
   </div>
@@ -31,7 +32,7 @@
         </tr>
     </tbody>
 </table> -->
-<button  type="submit" class="btn btn-danger" (click)="open(mymodal)">Confirm Park</button>
+<button  type="submit" class="btn btn-danger" (click)="open(mymodal)" style="margin-bottom: 5%;">Confirm Park</button>
 <ng-template #mymodal let-modal>
   <div class="modal-header">
     <h4 class="modal-title" id="modal-basic-title"></h4>

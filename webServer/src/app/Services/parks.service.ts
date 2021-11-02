@@ -9,7 +9,7 @@ export class ParksService {
  
   constructor(private http: HttpClient) { }
   Allpark(parks:Park){
-    const path = "http://3.93.222.241:3000/api/v1/retrive-parks-date"
+    const path = "http://3.93.222.241:3000/api/v1/parkcapacity/availability"
     return this.http.post<Park>(path, parks)
   }
 }
