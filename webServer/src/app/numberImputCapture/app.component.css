@@ -1,60 +1,70 @@
-.form{
-    margin: 10% 0% 0% 30%;
-    margin-left: 28%;
-    align-items: center;
+.form {
+  margin: 10% 0% 0% 30%;
+  margin-left: 28%;
+  align-items: center;
 }
-.col-14{
-    width: 50%;
+.col-14 {
+  width: 50%;
+  height: 100%;
+  padding: 0%;
+}
+button {
+  margin-top: 57%;
+  background-color: rgb(54, 146, 146);
+  border-color: rgb(54, 146, 146);
+  height: 55px;
+}
+
+.btn-danger :hover {
+  background-color: aqua;
+}
+.modal-header {
+  background-color: rgb(54, 146, 146);
+}
+
+.inputN {
+  height: 55px;
+  width: 50%;
+}
+
+@media screen and (max-width: 767px) {
+  button {
+    margin-top: 7%;
+    width: 70%;
+  }
+  .col-14 {
+    width: 70%;
     height: 100%;
-    padding: 0%;
-}
-button{
-    margin-top: 57%;
-    background-color: rgb(54, 146, 146);
-    border-color: rgb(54, 146, 146);
-    height: 55px;
-}
-.btn-danger :hover{
-    background-color: aqua;
-}
-.modal-header{
-    background-color:rgb(54, 146, 146) ;
-}
-
-.inputN{
-    height: 55px;
-    width: 50%;
-}
-
-@media screen and (max-width: 767px){
-    button{
-        margin-top: 7%;
-        width: 70%;
-    }
-    .col-14{
-        width: 70%;
-        height: 100%;
-    }
+  }
 }
 
 @media screen and (max-width: 575px) {
-    button{
-        margin-top: 7%;
-        width: 70%;
-    }
-    .col-14{
-        width: 70%;
-        height: 100%;
-    }
+  button {
+    margin-top: 7%;
+    width: 70%;
+  }
+  .col-14 {
+    width: 70%;
+    height: 100%;
+  }
 }
 
 @media screen and (max-width: 1800px) {
-    button{
-        margin-top: 7%;
-        width: 70%;
-    }
-    .col-14{
-        width: 70%;
-        height: 100%;
-    }
+  button {
+    margin-top: 7%;
+    width: 70%;
+  }
+  .col-14 {
+    width: 48%;
+    height: 100%;
+  }
+  .num-buttom {
+    width: 125px;
+  }
+  .num-buttom button {
+    margin-top: 49px;
+  }
+  .inputN {
+    max-width: 557px;
+  }
 }
