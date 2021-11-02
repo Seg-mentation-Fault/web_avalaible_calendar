@@ -2,3 +2,10 @@ button{
     background-color: rgb(54, 146, 146);
     border-color: rgb(54, 146, 146);
 }
+img{
+    margin-left: 50%;
+    
+}
+.ngx-qrcode{
+    margin-left: 38%;
+}

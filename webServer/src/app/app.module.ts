@@ -10,6 +10,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ParksComponent } from './parks/parks.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
+
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatCardModule} from '@angular/material/card';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -37,6 +39,7 @@ import { FormReservationComponent } from './form-reservation/form-reservation.co
     MatFormFieldModule,
     MatInputModule,
     HttpClientModule,
+    NgxQRCodeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

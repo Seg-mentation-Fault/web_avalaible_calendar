@@ -17,10 +17,16 @@
         <button  type="submit" class="btn btn-danger" (click)="confirmReservation()">Confirm Reservation</button>
     </div>
 </form>
-<div class="card" *ngFor="let items of confirmation">
-  <div class="card-body">
-    <h5 class="card-title">Your confirm Code: </h5>
-    <p class="card-text">{{items.confirmCode}}</p>
+<div class="container">
+  <div class="card" *ngFor="let items of confirmation" style="justify-content: center;">
+  <div class="card-body" style="justify-content: center;">
+    <h1 class="card-title">Your confirm Code: </h1>
+    
+    
   </div>
+  <ngx-qrcode [elementType]="elementType" [value]="items.confirmCode" class="ngx-qrcode" ></ngx-qrcode>
 </div>
+
+</div>
+
 

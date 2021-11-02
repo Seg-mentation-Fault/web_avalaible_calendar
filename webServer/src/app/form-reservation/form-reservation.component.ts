@@ -3,6 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../Services/data.service'
 import { ReservationService } from '../Services/reservation.service'
 
+import { NgxQrcodeElementTypes } from '@techiediaries/ngx-qrcode';
+import { NgxQrcodeErrorCorrectionLevels } from '@techiediaries/ngx-qrcode';
+
 @Component({
   selector: 'app-form-reservation',
   templateUrl: './form-reservation.component.html',
@@ -17,6 +20,13 @@ export class FormReservationComponent implements OnInit {
   id:number = 0;
   confirmation:any = [];
   validEmail:boolean;
+
+  url = "hola weones";
+  profile = "routeToMyProfile";
+  elementType = NgxQrcodeElementTypes.URL;
+  errorCorrectionlevel = NgxQrcodeErrorCorrectionLevels.HIGH;
+  value = ""
+  
 
   constructor(private dataservice:DataService, private reservation:ReservationService) { }
 
@@ -49,5 +59,5 @@ export class FormReservationComponent implements OnInit {
     }
 
   }
-
+  
 }
